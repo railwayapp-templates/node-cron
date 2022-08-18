@@ -16,7 +16,8 @@
     "lint": "dts lint",
     "prepare": "dts build",
     "size": "size-limit",
-    "start": "dts watch",
+    "dev": "dts watch",
+    "start": "node dist/index.js",
     "test": "dts test"
   },
   "husky": {
@@ -46,5 +47,18 @@
       "path": "dist/cron-service.esm.js",
       "limit": "10 KB"
     }
-  ]
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.0.1",
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/node-cron": "^3.0.2",
+    "dts-cli": "^1.6.0",
+    "husky": "^8.0.1",
+    "size-limit": "^8.0.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "node-cron": "^3.0.2"
+  }
 }

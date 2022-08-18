@@ -1,6 +1,5 @@
-export const sum = (a: number, b: number) => {
-  if ('development' === process.env.NODE_ENV) {
-    console.log('dev only output');
-  }
-  return a + b;
-};
+import cron from 'node-cron';
+
+cron.schedule(`*/1 * * * *`, async () => {
+  console.log(`${new Date().toLocaleString()}: running your task...`);
+});
